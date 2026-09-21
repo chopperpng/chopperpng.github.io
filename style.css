@@ -49,43 +49,35 @@ img {
     justify-content: space-between;
 
     border-bottom: 1px solid #292929;
-
-    position: relative;
-    z-index: 10;
 }
 
 
 .logo {
     font-size: 20px;
-
     font-weight: 900;
-
     letter-spacing: -1px;
 }
 
 
 .nav nav {
     display: flex;
-
     gap: 35px;
 }
 
 
 .nav nav a {
     font-size: 11px;
-
     font-weight: 700;
-
     letter-spacing: 1.5px;
 
-    opacity: 0.65;
+    color: #888;
 
-    transition: opacity 0.2s ease;
+    transition: color .2s ease;
 }
 
 
 .nav nav a:hover {
-    opacity: 1;
+    color: #fff;
 }
 
 
@@ -99,38 +91,33 @@ img {
     padding: 7vh 5vw 5vh;
 
     display: flex;
-
     flex-direction: column;
-
     justify-content: space-between;
 }
 
 
 .hero-meta {
     display: flex;
-
     justify-content: space-between;
 
     font-size: 10px;
-
     font-weight: 700;
-
     letter-spacing: 1.5px;
 
-    color: #888;
+    color: #777;
 }
 
 
 .hero h1 {
     font-size: clamp(90px, 16vw, 250px);
 
-    line-height: 0.78;
+    line-height: .78;
 
-    letter-spacing: -0.085em;
+    letter-spacing: -.085em;
 
     font-weight: 900;
 
-    margin-left: -0.06em;
+    margin-left: -.06em;
 }
 
 
@@ -141,9 +128,7 @@ img {
 
 .hero-bottom {
     display: flex;
-
     justify-content: space-between;
-
     align-items: flex-end;
 
     gap: 50px;
@@ -154,7 +139,6 @@ img {
     max-width: 430px;
 
     font-size: 15px;
-
     line-height: 1.6;
 
     color: #aaa;
@@ -167,33 +151,27 @@ img {
     padding: 17px 21px;
 
     font-size: 10px;
-
     font-weight: 800;
-
     letter-spacing: 1.5px;
 
-    transition:
-        background 0.25s ease,
-        color 0.25s ease;
+    transition: .25s ease;
 }
 
 
 .work-button span {
     margin-left: 30px;
-
     font-size: 15px;
 }
 
 
 .work-button:hover {
     background: #f1f1ed;
-
     color: #0b0b0b;
 }
 
 
 /* =========================
-   GENERAL SECTIONS
+   SECTIONS
 ========================= */
 
 .work-section,
@@ -205,7 +183,6 @@ img {
 
 .section-heading {
     display: grid;
-
     grid-template-columns: 80px 1fr;
 
     margin-bottom: 120px;
@@ -215,7 +192,6 @@ img {
 .section-heading > span,
 .other-heading > span {
     font-size: 11px;
-
     font-weight: 700;
 
     color: #666;
@@ -228,37 +204,35 @@ img {
 .other-heading h2 {
     font-size: clamp(60px, 9vw, 140px);
 
-    line-height: 0.82;
+    line-height: .82;
 
-    letter-spacing: -0.07em;
+    letter-spacing: -.07em;
 
     font-weight: 900;
 }
 
 
 /* =========================
-   PROJECT SHOWCASE
+   PROJECT
 ========================= */
 
-.project-showcase {
-    margin-bottom: 250px;
+.project {
+    margin-bottom: 190px;
 }
 
 
-.project-top {
+.project-header {
     display: grid;
 
-    grid-template-columns: 80px 1fr auto;
+    grid-template-columns: 80px 1fr;
 
-    align-items: end;
+    align-items: start;
 
-    gap: 30px;
-
-    margin-bottom: 35px;
+    margin-bottom: 28px;
 }
 
 
-.project-index {
+.project-number {
     font-size: 11px;
 
     font-weight: 800;
@@ -267,136 +241,138 @@ img {
 }
 
 
-.project-heading {
-    min-height: 100px;
+.project-type {
+    display: block;
 
-    display: flex;
+    margin-bottom: 12px;
 
-    align-items: flex-end;
-}
-
-
-.project-heading img {
-    width: min(430px, 45vw);
-
-    max-height: 110px;
-
-    object-fit: contain;
-
-    object-position: left bottom;
-}
-
-
-.project-meta {
     font-size: 9px;
 
     font-weight: 800;
 
-    line-height: 1.5;
-
     letter-spacing: 1.5px;
 
     color: #666;
+}
 
-    text-align: right;
+
+.project-header h3 {
+    font-size: clamp(45px, 6vw, 90px);
+
+    line-height: .85;
+
+    letter-spacing: -.065em;
+
+    font-weight: 900;
 }
 
 
 /* =========================
-   PROJECT GALLERY
+   PROJECT VISUALS
 ========================= */
 
-.project-gallery {
+.project-visual {
     display: grid;
 
-    gap: 18px;
+    grid-template-columns: 35% 65%;
 
-    align-items: stretch;
+    gap: 15px;
+
+    height: min(48vw, 650px);
 }
 
 
-.panku-gallery {
-    grid-template-columns: 0.72fr 1.28fr;
+.cleaver .project-visual {
+    grid-template-columns: 65% 35%;
 }
 
 
-.cleaver-gallery {
-    grid-template-columns: 1.28fr 0.72fr;
-}
-
-
-.clock-gallery {
-    grid-template-columns: 0.72fr 1.28fr;
-}
-
-
-.project-title-image,
-.project-gameplay {
+.project-logo,
+.project-image {
     position: relative;
 
     overflow: hidden;
-
-    min-height: 580px;
 
     background: #151515;
 }
 
 
-.project-title-image {
+.project-logo {
     display: flex;
 
     align-items: center;
-
     justify-content: center;
 
-    padding: 60px;
+    padding: 50px;
 }
 
 
-.project-title-image img {
-    width: 85%;
+.project-logo img {
+    width: 90%;
 
-    max-height: 75%;
+    max-height: 80%;
 
     object-fit: contain;
 }
 
 
-.project-gameplay {
-    cursor: default;
+/* Slightly different treatment per logo */
+
+.panku .project-logo {
+    background:
+        radial-gradient(
+            circle at center,
+            #292929 0%,
+            #171717 50%,
+            #0d0d0d 100%
+        );
 }
 
 
-.project-gameplay img {
-    width: 100%;
+.panku .project-logo img {
+    width: 78%;
+}
 
+
+.cleaver .project-logo {
+    background: #171717;
+}
+
+
+.clock .project-logo {
+    background: #161616;
+}
+
+
+.clock .project-logo img {
+    width: 82%;
+}
+
+
+.project-image img {
+    width: 100%;
     height: 100%;
 
     object-fit: cover;
 
-    transition:
-        transform 0.7s cubic-bezier(.2,.7,.2,1),
-        filter 0.4s ease;
+    transition: transform .6s ease;
 }
 
 
-.project-gameplay:hover img {
-    transform: scale(1.035);
-
-    filter: brightness(0.72);
+.project-image:hover img {
+    transform: scale(1.025);
 }
 
 
-.project-gameplay span {
+.project-image span {
     position: absolute;
 
-    bottom: 18px;
-
-    left: 18px;
+    bottom: 15px;
+    left: 15px;
 
     background: #0b0b0b;
 
-    padding: 9px 12px;
+    padding: 8px 11px;
 
     font-size: 9px;
 
@@ -409,142 +385,72 @@ img {
 
 
 /* =========================
-   PROJECT-SPECIFIC TREATMENT
+   PROJECT TEXT
 ========================= */
 
-.panku-project .project-title-image {
-    background:
-        radial-gradient(
-            circle at center,
-            #242424 0%,
-            #141414 55%,
-            #0b0b0b 100%
-        );
-}
-
-
-.panku-project .project-title-image img {
-    width: 75%;
-}
-
-
-.cleaver-project .project-title-image {
-    background: #171717;
-
-    padding: 30px;
-}
-
-
-.cleaver-project .project-title-image img {
-    width: 100%;
-
-    max-height: 100%;
-}
-
-
-.clock-project .project-title-image {
-    background: #171717;
-}
-
-
-.clock-project .project-title-image img {
-    width: 80%;
-}
-
-
-/* =========================
-   PROJECT INFORMATION
-========================= */
-
-.project-bottom {
+.project-info {
     display: grid;
 
     grid-template-columns: 1fr 1fr;
 
     gap: 80px;
 
-    margin-top: 25px;
+    margin-left: 80px;
 
-    padding-top: 25px;
-
-    border-top: 1px solid #333;
+    padding-top: 24px;
 }
 
 
-.project-description h3 {
-    font-size: clamp(35px, 5vw, 70px);
-
-    line-height: 0.85;
-
-    letter-spacing: -0.06em;
-
-    margin-bottom: 20px;
-}
-
-
-.project-description p {
+.project-info > div:last-child {
     max-width: 500px;
-
-    font-size: 17px;
-
-    line-height: 1.5;
-
-    color: #ddd;
 }
 
 
-.project-details {
-    display: flex;
+.project-info h4 {
+    max-width: 650px;
 
-    flex-direction: column;
+    font-size: clamp(22px, 2.4vw, 34px);
 
-    justify-content: space-between;
+    line-height: 1.15;
 
-    align-items: flex-start;
+    letter-spacing: -.035em;
 
-    gap: 30px;
+    font-weight: 500;
 }
 
 
-.project-details p {
-    max-width: 500px;
-
+.project-info p {
     font-size: 13px;
 
-    line-height: 1.75;
+    line-height: 1.7;
 
     color: #888;
+
+    margin-bottom: 25px;
 }
 
 
-.project-details a {
+.project-info a {
+    display: inline-block;
+
     font-size: 10px;
 
     font-weight: 800;
 
     letter-spacing: 1.5px;
 
-    border-bottom: 1px solid #555;
-
     padding-bottom: 7px;
 
-    transition:
-        border-color 0.2s ease,
-        color 0.2s ease;
-}
-
-
-.project-details a:hover {
-    border-color: #f1f1ed;
+    border-bottom: 1px solid #555;
 }
 
 
 .contribution {
     display: inline-block;
 
-    border: 1px solid #444;
+    padding: 9px 11px;
 
-    padding: 10px 12px;
+    border: 1px solid #444;
 
     font-size: 9px;
 
@@ -565,7 +471,7 @@ img {
 
     grid-template-columns: 80px 1fr;
 
-    margin: 280px 0 90px;
+    margin: 260px 0 80px;
 }
 
 
@@ -579,9 +485,9 @@ img {
 
 
 .small-project {
-    min-height: 330px;
+    min-height: 300px;
 
-    padding: 35px 30px;
+    padding: 30px;
 
     border-right: 1px solid #333;
 
@@ -610,14 +516,14 @@ img {
 
 
 .small-project h3 {
-    font-size: 28px;
+    font-size: 27px;
 
-    letter-spacing: -0.04em;
+    letter-spacing: -.04em;
 }
 
 
 .small-project p {
-    max-width: 300px;
+    max-width: 320px;
 
     font-size: 12px;
 
@@ -648,7 +554,7 @@ img {
 
     line-height: 1.05;
 
-    letter-spacing: -0.045em;
+    letter-spacing: -.045em;
 
     margin-bottom: 100px;
 }
@@ -706,21 +612,17 @@ img {
 
 .skill-row > span {
     font-size: 9px;
-
     color: #666;
 }
 
 
 .skill-row h3 {
     font-size: 16px;
-
-    letter-spacing: -0.02em;
 }
 
 
 .skill-row p {
     font-size: 12px;
-
     color: #888;
 }
 
@@ -737,9 +639,7 @@ img {
     border-top: 1px solid #292929;
 
     display: flex;
-
     flex-direction: column;
-
     justify-content: center;
 }
 
@@ -758,11 +658,11 @@ img {
 .contact-section h2 {
     font-size: clamp(70px, 13vw, 190px);
 
-    line-height: 0.78;
+    line-height: .78;
 
-    letter-spacing: -0.08em;
+    letter-spacing: -.08em;
 
-    margin-left: -0.06em;
+    margin-left: -.06em;
 }
 
 
@@ -782,9 +682,9 @@ img {
 .email {
     display: inline-block;
 
-    margin-top: 30px;
-
     width: fit-content;
+
+    margin-top: 30px;
 
     font-size: 12px;
 
@@ -795,11 +695,6 @@ img {
     border-bottom: 1px solid #777;
 
     padding-bottom: 7px;
-}
-
-
-.email:hover {
-    border-color: #f1f1ed;
 }
 
 
@@ -823,11 +718,6 @@ footer {
     letter-spacing: 1px;
 
     color: #666;
-}
-
-
-footer a:hover {
-    color: #f1f1ed;
 }
 
 
@@ -856,7 +746,6 @@ footer a:hover {
 
     .hero-meta {
         flex-direction: column;
-
         gap: 8px;
     }
 
@@ -893,86 +782,62 @@ footer a:hover {
     }
 
 
-    /* PROJECTS */
+    /* PROJECT */
 
-    .project-showcase {
-        margin-bottom: 150px;
+    .project {
+        margin-bottom: 130px;
     }
 
 
-    .project-top {
+    .project-header {
         grid-template-columns: 35px 1fr;
 
-        gap: 15px;
-
-        align-items: start;
+        margin-bottom: 20px;
     }
 
 
-    .project-heading {
-        min-height: 60px;
+    .project-header h3 {
+        font-size: 12vw;
     }
 
 
-    .project-heading img {
-        width: 100%;
-
-        max-width: 280px;
-
-        max-height: 80px;
-    }
-
-
-    .project-meta {
-        grid-column: 2;
-
-        text-align: left;
-
-        white-space: normal;
-
-        margin-top: -5px;
-    }
-
-
-    .project-gallery,
-    .panku-gallery,
-    .cleaver-gallery,
-    .clock-gallery {
+    .project-visual,
+    .cleaver .project-visual {
         grid-template-columns: 1fr;
 
-        gap: 12px;
+        height: auto;
+
+        gap: 10px;
     }
 
 
-    .project-title-image,
-    .project-gameplay {
-        min-height: 0;
+    .project-logo {
+        height: 48vw;
 
+        max-height: 350px;
+
+        padding: 30px;
+    }
+
+
+    .project-image {
         height: 60vw;
 
         max-height: 450px;
     }
 
 
-    .project-title-image {
-        padding: 35px;
-    }
-
-
-    .project-bottom {
+    .project-info {
         grid-template-columns: 1fr;
 
-        gap: 30px;
+        gap: 25px;
+
+        margin-left: 0;
     }
 
 
-    .project-description h3 {
-        font-size: 12vw;
-    }
-
-
-    .project-description p {
-        font-size: 15px;
+    .project-info h4 {
+        font-size: 22px;
     }
 
 
@@ -981,7 +846,7 @@ footer a:hover {
     .other-heading {
         grid-template-columns: 40px 1fr;
 
-        margin-top: 160px;
+        margin-top: 150px;
     }
 
 
@@ -991,7 +856,7 @@ footer a:hover {
 
 
     .small-project {
-        min-height: 240px;
+        min-height: 230px;
 
         border-right: none;
 
