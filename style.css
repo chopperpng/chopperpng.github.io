@@ -1,798 +1,634 @@
-/* =========================================================
-   BASE
-========================================================= */
+:root {
+    --bg: #111111;
+    --surface: #181818;
+    --text: #f2f2f2;
+    --muted: #b8b8b8;
+    --line: #353535;
+
+    /* BLUE / PURPLE ACCENT */
+    --accent: #8b7cff;
+}
+
 
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
+
 
 html {
     scroll-behavior: smooth;
 }
 
+
 body {
-    background: #111;
-    color: #eee;
+    background: var(--bg);
+    color: var(--text);
     font-family: Arial, Helvetica, sans-serif;
-    overflow-x: hidden;
+    line-height: 1.5;
 }
 
-img {
-    display: block;
-    width: 100%;
-}
 
 a {
     color: inherit;
     text-decoration: none;
 }
 
-:root {
-    --background: #111;
-    --panel: #181818;
-    --line: #303030;
-    --muted: #777;
-    --accent: #dfff35;
+
+img {
+    display: block;
+    max-width: 100%;
 }
 
 
-/* =========================================================
-   HEADER
-========================================================= */
+/* HEADER */
 
-header {
-    height: 70px;
-
-    padding: 0 4vw;
-
+.site-header {
+    width: 100%;
+    padding: 28px 5vw;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-
+    align-items: center;
     border-bottom: 1px solid var(--line);
 }
 
-.logo {
-    font-size: 12px;
-    font-weight: 900;
-    letter-spacing: 1px;
-}
 
-header nav {
-    display: flex;
-    gap: 30px;
-}
-
-header nav a {
-    font-size: 8px;
+.site-name {
+    font-size: 0.95rem;
     font-weight: 700;
-    letter-spacing: 2px;
-
-    color: #888;
-
-    transition: color .2s ease;
+    letter-spacing: 0.08em;
 }
 
-header nav a:hover {
+
+.site-header nav {
+    display: flex;
+    gap: 32px;
+}
+
+
+.site-header nav a {
+    font-size: 0.9rem;
+    letter-spacing: 0.1em;
+    color: var(--muted);
+    transition: color 0.2s ease;
+}
+
+
+.site-header nav a:hover {
     color: var(--accent);
 }
 
 
-/* =========================================================
-   HERO
-========================================================= */
+/* HERO */
 
 .hero {
-    min-height: calc(100vh - 70px);
-
-    padding: 35px 4vw 40px;
-
+    min-height: 78vh;
+    padding: 8vh 5vw 5vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
-    position: relative;
+    border-bottom: 1px solid var(--line);
 }
 
-.hero-label {
-    display: flex;
-    justify-content: space-between;
 
-    font-size: 8px;
-    font-weight: 700;
-    letter-spacing: 2px;
-
-    color: #666;
+.hero-small {
+    font-size: 0.9rem;
+    letter-spacing: 0.12em;
+    color: var(--muted);
 }
+
 
 .hero h1 {
-    font-size: clamp(100px, 20vw, 290px);
-    line-height: .72;
-
-    letter-spacing: -.1em;
-    font-weight: 900;
+    font-size: clamp(6rem, 17vw, 17rem);
+    line-height: 0.78;
+    letter-spacing: -0.07em;
+    font-weight: 800;
+    margin-left: -0.04em;
 }
+
 
 .hero h1 span {
     color: var(--accent);
 }
 
-.hero-info {
+
+.hero-bottom {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-
-    padding-top: 25px;
-
-    border-top: 1px solid var(--line);
-}
-
-.hero-info p {
-    font-size: 12px;
-    line-height: 1.5;
-
-    color: #777;
-}
-
-.hero-info p:last-child {
-    text-align: right;
-
-    font-size: 8px;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-
-    color: #555;
 }
 
 
-/* =========================================================
-   WORK
-========================================================= */
-
-.work {
-    padding: 13vw 4vw;
+.hero-bottom p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    letter-spacing: 0.08em;
+    color: var(--muted);
 }
 
-.section-header {
-    display: grid;
-    grid-template-columns: 60px 1fr;
 
-    gap: 4vw;
-
-    align-items: end;
-
-    padding-bottom: 30px;
-
-    border-bottom: 1px solid var(--line);
-
-    margin-bottom: 10vw;
-}
-
-.section-header > span {
-    font-size: 9px;
-    color: #555;
-}
-
-.eyebrow {
-    margin-bottom: 18px;
-
-    font-size: 8px;
-    font-weight: 700;
-    letter-spacing: 2px;
-
+.hero-number {
     color: var(--accent);
-}
-
-.section-header h2 {
-    font-size: clamp(60px, 9vw, 130px);
-    line-height: .75;
-
-    letter-spacing: -.08em;
-    font-weight: 900;
+    font-size: 0.95rem;
+    letter-spacing: 0.1em;
 }
 
 
-/* =========================================================
-   PROJECT
-========================================================= */
+/* GENERAL SECTIONS */
+
+.work,
+.other-work,
+.about,
+.skills,
+.contact {
+    padding: 9vw 5vw;
+}
+
+
+.section-heading {
+    display: flex;
+    align-items: baseline;
+    gap: 20px;
+    margin-bottom: 70px;
+}
+
+
+.section-heading span {
+    color: var(--accent);
+    font-size: 0.9rem;
+    letter-spacing: 0.1em;
+}
+
+
+.section-heading h2 {
+    font-size: clamp(2rem, 4vw, 4rem);
+    letter-spacing: -0.04em;
+    line-height: 1;
+}
+
+
+/* PROJECTS */
 
 .project {
-    margin-bottom: 16vw;
+    margin-bottom: 13vw;
 }
+
+
+.project:last-child {
+    margin-bottom: 0;
+}
+
 
 .project-header {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-
-    padding-bottom: 25px;
-
-    border-bottom: 1px solid var(--line);
+    gap: 30px;
+    margin-bottom: 25px;
 }
 
-.project-header > div:first-child {
+
+.project-header > div {
     display: flex;
     align-items: baseline;
-    gap: 25px;
-}
-
-.project-header > div:first-child > span {
-    font-size: 8px;
-    color: #555;
-}
-
-.project-header h3 {
-    font-size: clamp(35px, 6vw, 85px);
-    line-height: .8;
-
-    letter-spacing: -.07em;
-}
-
-.project-header h3::first-letter {
-    color: var(--accent);
-}
-
-.project-tags {
-    display: flex;
     gap: 18px;
 }
 
-.project-tags span {
-    font-size: 7px;
-    font-weight: 700;
-    letter-spacing: 1.5px;
 
-    color: #555;
+.project-number {
+    color: var(--accent);
+    font-size: 0.9rem;
+    letter-spacing: 0.1em;
 }
 
 
-/* =========================================================
-   PROJECT IMAGE
-========================================================= */
+.project-header h3 {
+    font-size: clamp(2rem, 5vw, 5rem);
+    line-height: 0.9;
+    letter-spacing: -0.05em;
+}
+
+
+.project-type {
+    font-size: 0.9rem;
+    color: var(--muted);
+    letter-spacing: 0.08em;
+    text-align: right;
+}
+
+
+/* PROJECT IMAGE */
+
+.project-image-link {
+    display: block;
+}
+
 
 .project-image {
     position: relative;
-
-    margin-top: 25px;
-
-    height: min(55vw, 750px);
-
-    overflow: visible;
+    overflow: hidden;
+    background: var(--surface);
 }
+
 
 .project-image > img {
     width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-
-    background: var(--panel);
-
-    transition: transform .5s ease;
-}
-
-.project-image:hover > img {
-    transform: scale(1.015);
+    height: auto;
+    transition: transform 0.5s ease;
 }
 
 
-/* =========================================================
-   PROJECT LOGO
-========================================================= */
+.project-image-link:hover .project-image > img {
+    transform: scale(1.02);
+}
+
 
 .project-logo {
     position: absolute;
-
-    width: min(28vw, 340px);
-
-    right: 35px;
-    bottom: -35px;
-
-    padding: 12px;
-
-    background: #111;
-
-    border: 1px solid #444;
-
-    box-shadow: 0 20px 50px rgba(0,0,0,.6);
-
-    transform: rotate(1deg);
-
-    transition:
-        transform .3s ease,
-        border-color .3s ease;
-}
-
-.project-logo:hover {
-    transform: translateY(-8px) rotate(-1deg);
-
-    border-color: var(--accent);
-}
-
-.project-logo span {
-    display: block;
-
-    padding-top: 10px;
-    margin-top: 8px;
-
-    border-top: 1px solid var(--line);
-
-    font-size: 7px;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-
-    color: #888;
+    left: 4%;
+    bottom: 4%;
+    width: min(280px, 28%);
+    padding: 16px;
+    background: rgba(17, 17, 17, 0.88);
+    backdrop-filter: blur(8px);
 }
 
 
-/* =========================================================
-   PROJECT DESCRIPTION
-========================================================= */
-
-.project-description {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-
-    gap: 5vw;
-
-    padding-top: 65px;
-
-    border-bottom: 1px solid var(--line);
-    padding-bottom: 35px;
-}
-
-.project-type {
-    font-size: 8px;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-
-    color: var(--accent);
-}
-
-.project-description > div:last-child {
-    max-width: 650px;
-}
-
-.project-description p {
-    margin-bottom: 18px;
-
-    font-size: 13px;
-    line-height: 1.6;
-
-    color: #777;
-}
-
-.project-description .project-lead {
-    font-size: 19px;
-    line-height: 1.35;
-
-    color: #bbb;
+.project-logo img {
+    width: 100%;
+    height: auto;
 }
 
 
-/* =========================================================
-   OTHER WORK
-========================================================= */
+.image-arrow {
+    position: absolute;
+    top: 4%;
+    right: 4%;
 
-.other-work {
-    margin-top: 5vw;
-}
-
-.other-header {
-    display: grid;
-    grid-template-columns: 60px 1fr;
-
-    gap: 4vw;
-
-    padding: 25px 0;
-
-    border-top: 1px solid var(--line);
-    border-bottom: 1px solid var(--line);
-}
-
-.other-header span {
-    font-size: 9px;
-    color: #555;
-}
-
-.other-header h2 {
-    font-size: clamp(40px, 6vw, 80px);
-    line-height: .8;
-
-    letter-spacing: -.07em;
-}
-
-.other-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-}
-
-.other-grid article {
-    min-height: 300px;
-
-    padding: 25px;
-
-    border-right: 1px solid var(--line);
-    border-bottom: 1px solid var(--line);
+    width: 55px;
+    height: 55px;
 
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
 
-    transition: background .25s ease;
-}
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
 
-.other-grid article:first-child {
-    border-left: 1px solid var(--line);
-}
+    font-size: 1.4rem;
+    color: white;
 
-.other-grid article:hover {
-    background: #181818;
-}
-
-.other-grid article > span {
-    font-size: 8px;
-    color: #555;
-}
-
-.other-grid h3 {
-    font-size: clamp(28px, 3vw, 50px);
-    line-height: .8;
-
-    letter-spacing: -.06em;
-}
-
-.other-grid p {
-    font-size: 12px;
-    line-height: 1.5;
-
-    color: #777;
-}
-
-.other-grid small {
-    font-size: 7px;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-
-    color: #555;
+    transition: all 0.2s ease;
 }
 
 
-/* =========================================================
-   ABOUT
-========================================================= */
-
-.about {
-    padding: 13vw 4vw;
-
-    border-top: 1px solid var(--line);
-}
-
-.about-grid {
-    display: grid;
-    grid-template-columns: 1.2fr 1fr;
-
-    gap: 10vw;
-
-    padding-bottom: 10vw;
-}
-
-.about-grid h3 {
-    font-size: clamp(55px, 7vw, 110px);
-    line-height: .78;
-
-    letter-spacing: -.08em;
-}
-
-.about-grid h3 span {
-    color: var(--accent);
-}
-
-.about-grid > div {
-    max-width: 500px;
-    align-self: end;
-}
-
-.about-grid p {
-    margin-bottom: 22px;
-
-    font-size: 13px;
-    line-height: 1.6;
-
-    color: #777;
-}
-
-
-/* =========================================================
-   SKILLS
-========================================================= */
-
-.skills-title {
-    padding: 15px 0;
-
-    border-top: 1px solid var(--line);
-    border-bottom: 1px solid var(--line);
-
-    font-size: 8px;
-    font-weight: 700;
-    letter-spacing: 2px;
-
-    color: #555;
-}
-
-.skill-list {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.skill-list span {
-    padding: 25px 30px;
-
-    border-right: 1px solid var(--line);
-    border-bottom: 1px solid var(--line);
-
-    font-size: 11px;
-    font-weight: 800;
-    letter-spacing: -.02em;
-
-    transition:
-        background .2s ease,
-        color .2s ease;
-}
-
-.skill-list span:hover {
+.project-image-link:hover .image-arrow {
     background: var(--accent);
+    border-color: var(--accent);
     color: #111;
 }
 
 
-/* =========================================================
-   CONTACT
-========================================================= */
+/* PROJECT INFORMATION */
+
+.project-info {
+    max-width: 900px;
+    margin-top: 35px;
+    margin-left: 8%;
+}
+
+
+.project-meta {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    letter-spacing: 0.08em;
+    color: var(--accent);
+    margin-bottom: 22px;
+}
+
+
+.project-description {
+    font-size: 1.08rem;
+    line-height: 1.75;
+    color: #d0d0d0;
+    margin-bottom: 20px;
+    max-width: 800px;
+}
+
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 30px;
+}
+
+
+.tags span {
+    border: 1px solid var(--line);
+    padding: 8px 12px;
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+}
+
+
+/* OTHER WORK */
+
+.other-work {
+    border-top: 1px solid var(--line);
+}
+
+
+.other-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+
+.other-item {
+    border-top: 1px solid var(--line);
+    padding-top: 25px;
+}
+
+
+.other-number {
+    color: var(--accent);
+    font-size: 0.9rem;
+    margin-bottom: 40px;
+}
+
+
+.other-item h3 {
+    font-size: 1.5rem;
+    letter-spacing: -0.03em;
+    margin-bottom: 20px;
+}
+
+
+.other-item p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #c5c5c5;
+    margin-bottom: 30px;
+}
+
+
+.other-tools {
+    font-size: 0.82rem;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+}
+
+
+/* ABOUT */
+
+.about {
+    border-top: 1px solid var(--line);
+}
+
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10vw;
+}
+
+
+.about-intro h3 {
+    font-size: clamp(2.5rem, 5vw, 5rem);
+    line-height: 0.95;
+    letter-spacing: -0.05em;
+}
+
+
+.about-text {
+    font-size: 1.1rem;
+    line-height: 1.75;
+    color: #d0d0d0;
+}
+
+
+.about-text p {
+    margin-bottom: 28px;
+}
+
+
+.about-text p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* SKILLS */
+
+.skills {
+    border-top: 1px solid var(--line);
+}
+
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+
+.skills-grid > div {
+    border-top: 1px solid var(--line);
+    padding-top: 25px;
+}
+
+
+.skills-grid h3 {
+    font-size: 0.9rem;
+    letter-spacing: 0.08em;
+    color: var(--accent);
+    margin-bottom: 20px;
+}
+
+
+.skills-grid p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #c5c5c5;
+}
+
+
+/* CONTACT */
 
 .contact {
-    padding: 13vw 4vw 10vw;
-
+    min-height: 80vh;
     border-top: 1px solid var(--line);
-}
-
-.contact-content {
-    min-height: 55vh;
-
     display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-
-    padding-top: 10vw;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.contact-content p {
-    font-size: 8px;
-    font-weight: 700;
-    line-height: 1.8;
-    letter-spacing: 2px;
 
-    color: #666;
+.contact .section-heading {
+    margin-bottom: 80px;
 }
 
-.contact-content a {
-    display: flex;
-    align-items: center;
-    gap: 30px;
 
-    padding-bottom: 10px;
-
-    border-bottom: 1px solid #555;
-
-    font-size: clamp(20px, 3vw, 40px);
-    font-weight: 800;
-
-    letter-spacing: -.04em;
-
-    transition:
-        color .2s ease,
-        border-color .2s ease;
+.contact h3 {
+    font-size: clamp(4rem, 11vw, 11rem);
+    line-height: 0.8;
+    letter-spacing: -0.07em;
+    margin-bottom: 60px;
 }
 
-.contact-content a span {
+
+.contact p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: var(--muted);
+    max-width: 500px;
+    margin-bottom: 25px;
+}
+
+
+.contact-link {
+    display: inline-block;
+    width: fit-content;
+    font-size: 1.2rem;
     color: var(--accent);
+    border-bottom: 1px solid var(--accent);
+    padding-bottom: 5px;
+    transition: opacity 0.2s ease;
 }
 
-.contact-content a:hover {
-    color: var(--accent);
-    border-color: var(--accent);
+
+.contact-link:hover {
+    opacity: 0.7;
 }
 
 
-/* =========================================================
-   FOOTER
-========================================================= */
+/* FOOTER */
 
 footer {
+    border-top: 1px solid var(--line);
+    padding: 25px 5vw;
+
     display: flex;
     justify-content: space-between;
 
-    padding: 25px 4vw;
-
-    border-top: 1px solid var(--line);
-
-    font-size: 7px;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-
-    color: #555;
-}
-
-footer a:hover {
-    color: var(--accent);
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    color: var(--muted);
 }
 
 
-/* =========================================================
-   MOBILE
-========================================================= */
+/* RESPONSIVE */
 
-@media (max-width: 800px) {
-
-    header {
-        padding: 0 5vw;
-    }
-
-    header nav {
-        gap: 15px;
-    }
-
-    header nav a {
-        font-size: 7px;
-    }
-
+@media (max-width: 900px) {
 
     .hero {
-        min-height: 85vh;
-        padding: 25px 5vw 30px;
-    }
-
-    .hero-label {
-        font-size: 7px;
-    }
-
-    .hero-label span:last-child {
-        display: none;
+        min-height: 70vh;
     }
 
     .hero h1 {
-        font-size: 23vw;
-    }
-
-    .hero-info p {
-        font-size: 10px;
-    }
-
-
-    .work,
-    .about,
-    .contact {
-        padding-left: 5vw;
-        padding-right: 5vw;
-    }
-
-
-    .section-header {
-        grid-template-columns: 35px 1fr;
-    }
-
-    .section-header h2 {
-        font-size: 15vw;
-    }
-
-
-    .project-header {
-        display: block;
-    }
-
-    .project-header > div:first-child {
-        gap: 15px;
-        margin-bottom: 20px;
-    }
-
-    .project-header h3 {
-        font-size: 11vw;
-    }
-
-    .project-tags {
-        gap: 12px;
-    }
-
-    .project-tags span {
-        font-size: 6px;
-    }
-
-
-    .project-image {
-        height: 60vw;
-        min-height: 230px;
-    }
-
-    .project-logo {
-        width: 48%;
-
-        right: 12px;
-        bottom: -25px;
-
-        padding: 8px;
-    }
-
-    .project-logo span {
-        font-size: 5px;
-    }
-
-
-    .project-description {
-        grid-template-columns: 1fr;
-
-        gap: 25px;
-
-        padding-top: 50px;
-    }
-
-    .project-description .project-lead {
-        font-size: 16px;
-    }
-
-
-    .other-header {
-        grid-template-columns: 35px 1fr;
+        font-size: clamp(5rem, 17vw, 10rem);
     }
 
     .other-grid {
         grid-template-columns: 1fr;
     }
 
-    .other-grid article {
-        min-height: 230px;
-    }
-
-
     .about-grid {
         grid-template-columns: 1fr;
-
         gap: 60px;
     }
 
-    .about-grid h3 {
-        font-size: 15vw;
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 
+    .project-info {
+        margin-left: 0;
+    }
+}
 
-    .skill-list span {
-        padding: 18px 15px;
 
-        font-size: 9px;
+@media (max-width: 600px) {
+
+    .site-header {
+        padding: 20px 5vw;
     }
 
+    .site-header nav {
+        gap: 15px;
+    }
 
-    .contact-content {
-        min-height: 50vh;
+    .site-header nav a {
+        font-size: 0.75rem;
+    }
 
-        flex-direction: column;
+    .hero {
+        min-height: 65vh;
+        padding-top: 6vh;
+    }
+
+    .hero h1 {
+        font-size: 22vw;
+    }
+
+    .hero-bottom {
         align-items: flex-start;
-        justify-content: flex-end;
-
-        gap: 40px;
+        gap: 20px;
     }
 
-    .contact-content a {
-        font-size: 7vw;
+    .hero-bottom p {
+        font-size: 0.8rem;
     }
 
+    .section-heading {
+        margin-bottom: 45px;
+    }
+
+    .project-header {
+        display: block;
+    }
+
+    .project-header > div {
+        margin-bottom: 15px;
+    }
+
+    .project-type {
+        text-align: left;
+        font-size: 0.8rem;
+    }
+
+    .project-logo {
+        width: 42%;
+        padding: 10px;
+    }
+
+    .image-arrow {
+        width: 42px;
+        height: 42px;
+        font-size: 1rem;
+    }
+
+    .project-description {
+        font-size: 1rem;
+    }
+
+    .about-text {
+        font-size: 1rem;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact h3 {
+        font-size: 20vw;
+    }
 
     footer {
-        padding: 25px 5vw;
-
-        flex-direction: column;
-        gap: 12px;
+        font-size: 0.7rem;
+        gap: 20px;
     }
-
 }
