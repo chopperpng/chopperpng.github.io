@@ -1,7 +1,5 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,137 +11,342 @@
 
 <body>
 
-    <nav>
-        <div class="logo">AN</div>
+    <!-- NAVIGATION -->
+    <header class="navbar">
+        <a href="#" class="logo">AN</a>
 
-        <div class="nav-links">
-            <a href="#projects">Projects</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
-        </div>
-    </nav>
-
-
-    <header class="hero">
-
-        <p class="eyebrow">GAME TECHNOLOGY STUDENT</p>
-
-        <h1>Alex<br>Nichols</h1>
-
-        <p class="intro">
-            I'm a Game Technology student developing games,
-            experimenting with technology and learning how things work.
-        </p>
-
-        <a class="button" href="#projects">
-            View my work ↓
-        </a>
-
+        <nav>
+            <a href="#work">WORK</a>
+            <a href="#about">ABOUT</a>
+            <a href="#contact">CONTACT</a>
+        </nav>
     </header>
 
 
+    <!-- HERO -->
     <main>
 
-        <section id="projects">
+        <section class="hero">
 
-            <p class="eyebrow">01 — PROJECTS</p>
+            <div class="hero-label">
+                BSc (Hons) GAME TECHNOLOGY
+                <span>·</span>
+                BIRMINGHAM CITY UNIVERSITY
+            </div>
 
-            <h2>Selected Work</h2>
+            <h1>
+                ALEX<br>
+                <span>NICHOLS</span>
+            </h1>
 
-            <div class="project-grid">
+            <div class="hero-bottom">
 
-                <article class="project-card">
-                    <div class="project-image">
-                        <span>PROJECT IMAGE</span>
-                    </div>
+                <p>
+                    Game technology student interested in
+                    games, code, hardware, music, cinema
+                    and creative expression.
+                </p>
 
-                    <div class="project-info">
-                        <p class="project-type">UNIVERSITY PROJECT</p>
-                        <h3>Project Name</h3>
-                        <p>
-                            A short description of the game and what
-                            you worked on.
-                        </p>
-                    </div>
-                </article>
-
-
-                <article class="project-card">
-                    <div class="project-image">
-                        <span>PROJECT IMAGE</span>
-                    </div>
-
-                    <div class="project-info">
-                        <p class="project-type">PERSONAL PROJECT</p>
-                        <h3>Project Name</h3>
-                        <p>
-                            A short description of the game and what
-                            you worked on.
-                        </p>
-                    </div>
-                </article>
-
-
-                <article class="project-card">
-                    <div class="project-image">
-                        <span>PROJECT IMAGE</span>
-                    </div>
-
-                    <div class="project-info">
-                        <p class="project-type">PROTOTYPE</p>
-                        <h3>Project Name</h3>
-                        <p>
-                            A short description of the project.
-                        </p>
-                    </div>
-                </article>
+                <a href="#work" class="scroll-link">
+                    VIEW MY WORK
+                    <span>↓</span>
+                </a>
 
             </div>
 
         </section>
 
 
-        <section id="about">
+        <!-- WORK -->
+        <section id="work" class="work">
 
-            <p class="eyebrow">02 — ABOUT</p>
+            <div class="section-heading">
+                <span>01</span>
+                <h2>SELECTED WORK</h2>
+            </div>
 
-            <h2>About Me</h2>
 
-            <p class="about-text">
-                I'm a Game Technology student currently entering my
-                second year at university. I'm interested in game
-                development, programming and creating interactive
-                experiences.
-            </p>
+            <!-- PANKU -->
+            <article class="project project-featured">
+
+                <div class="project-image panku-image">
+                    <div class="image-label">01 / PANKU!</div>
+                </div>
+
+                <div class="project-info">
+
+                    <div class="project-number">01</div>
+
+                    <div>
+                        <div class="project-meta">
+                            UNREAL ENGINE 5 · BLUEPRINTS · SOLO
+                        </div>
+
+                        <h3>PANKU!</h3>
+
+                        <p>
+                            A five-level boomer shooter built entirely
+                            solo as my first Unreal Engine project.
+                            Featuring custom weapon, animation,
+                            controller and visual effect systems.
+                        </p>
+
+                        <a href="panku.html" class="project-link">
+                            VIEW PROJECT →
+                        </a>
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- CLEAVER VALLEY -->
+            <article class="project">
+
+                <div class="project-image cleaver-image">
+                    <div class="image-label">02 / CLEAVER VALLEY</div>
+                </div>
+
+                <div class="project-info">
+
+                    <div class="project-number">02</div>
+
+                    <div>
+                        <div class="project-meta">
+                            UNITY · C++ · SOLO
+                        </div>
+
+                        <h3>CLEAVER VALLEY</h3>
+
+                        <p>
+                            An arcade shooter developed in Unity,
+                            focused on gameplay programming and
+                            implementing multiple weapons,
+                            enemy spawning and controller support.
+                        </p>
+
+                        <a href="#" class="project-link">
+                            PROJECT PAGE →
+                        </a>
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- CLOCK FARM -->
+            <article class="project">
+
+                <div class="project-image clock-image">
+                    <div class="image-label">03 / CLOCK FARM</div>
+                </div>
+
+                <div class="project-info">
+
+                    <div class="project-number">03</div>
+
+                    <div>
+                        <div class="project-meta">
+                            UNREAL ENGINE 5 · BLUEPRINTS · GAME JAM
+                        </div>
+
+                        <h3>CLOCK FARM</h3>
+
+                        <p>
+                            A farming game created during a three-day
+                            game jam, where growing crops requires
+                            sacrificing years of your life.
+                        </p>
+
+                        <a href="#" class="project-link">
+                            PROJECT PAGE →
+                        </a>
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- OTHER WORK -->
+            <div class="other-work">
+
+                <div class="section-heading small-heading">
+                    <span>04</span>
+                    <h2>OTHER WORK</h2>
+                </div>
+
+                <div class="other-grid">
+
+                    <div class="other-item">
+                        <span>3D / MAYA</span>
+                        <h3>3D MODELLING</h3>
+                        <p>
+                            University modelling work using Maya,
+                            alongside personal experience with Blender.
+                        </p>
+                    </div>
+
+                    <div class="other-item">
+                        <span>ANIMATION / AUDIO</span>
+                        <h3>3D ANIMATION</h3>
+                        <p>
+                            Group teaser project involving character
+                            animation, texturing, lighting, music
+                            and sound design.
+                        </p>
+                    </div>
+
+                    <div class="other-item">
+                        <span>GAME DESIGN</span>
+                        <h3>CARD GAME</h3>
+                        <p>
+                            A competitive 1v1 card game inspired by
+                            games such as Yu-Gi-Oh!, featuring around
+                            100 designed and balanced cards.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
 
         </section>
 
 
-        <section id="contact">
+        <!-- ABOUT -->
+        <section id="about" class="about">
 
-            <p class="eyebrow">03 — CONTACT</p>
+            <div class="section-heading">
+                <span>02</span>
+                <h2>ABOUT</h2>
+            </div>
 
-            <h2>Let's talk.</h2>
+            <div class="about-content">
 
-            <p>
-                I'm always interested in hearing about games,
-                projects and opportunities.
-            </p>
+                <p class="about-large">
+                    I'm a Game Technology student interested in
+                    understanding how games work — from the systems
+                    underneath them to the way they look, sound
+                    and feel.
+                </p>
 
-            <a class="button" href="mailto:YOUR-EMAIL-HERE">
-                Get in touch
-            </a>
+                <div class="about-details">
+
+                    <p>
+                        I'm currently entering my second year of a
+                        BSc (Hons) Game Technology degree at
+                        Birmingham City University.
+                    </p>
+
+                    <p>
+                        During my first year I've worked with Unity,
+                        Unreal Engine 5, C++, Blueprints, Maya and
+                        game audio. I've also explored game design,
+                        modelling, animation and rapid development
+                        through game jams.
+                    </p>
+
+                    <p>
+                        Outside of development I'm heavily interested
+                        in games, music, cinema, art and expressionism,
+                        as well as computer hardware and understanding
+                        how the technology behind the things I use
+                        actually works.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SKILLS -->
+        <section class="skills">
+
+            <div class="section-heading">
+                <span>03</span>
+                <h2>TOOLS & INTERESTS</h2>
+            </div>
+
+            <div class="skills-grid">
+
+                <div class="skill">
+                    <span>01</span>
+                    <h3>GAME DEVELOPMENT</h3>
+                    <p>Unity · Unreal Engine 5 · C++ · Blueprints</p>
+                </div>
+
+                <div class="skill">
+                    <span>02</span>
+                    <h3>3D & ART</h3>
+                    <p>Maya · Blender · Modelling · Texturing · Lighting · Animation</p>
+                </div>
+
+                <div class="skill">
+                    <span>03</span>
+                    <h3>AUDIO</h3>
+                    <p>FL Studio · Music Production · Sound Design · SFX</p>
+                </div>
+
+                <div class="skill">
+                    <span>04</span>
+                    <h3>INTERESTS</h3>
+                    <p>Game Hardware · PC Systems · Cinema · Music · Art</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CONTACT -->
+        <section id="contact" class="contact">
+
+            <div class="section-heading">
+                <span>04</span>
+                <h2>CONTACT</h2>
+            </div>
+
+            <div class="contact-content">
+
+                <h2>
+                    LET'S MAKE<br>
+                    SOMETHING.
+                </h2>
+
+                <p>
+                    Whether it's games, technology,
+                    music or something completely different.
+                </p>
+
+                <a href="mailto:YOUR-EMAIL-HERE" class="contact-link">
+                    YOUR-EMAIL-HERE →
+                </a>
+
+            </div>
 
         </section>
 
     </main>
 
 
+    <!-- FOOTER -->
     <footer>
-        <p>© 2026 Alex Nichols</p>
+
+        <div>
+            © 2026 ALEX NICHOLS
+        </div>
+
+        <div>
+            BSC (HONS) GAME TECHNOLOGY
+        </div>
+
     </footer>
+
 
 </body>
 </html>
-```
-
