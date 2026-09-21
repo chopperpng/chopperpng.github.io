@@ -16,7 +16,9 @@ html {
 body {
     background: #0b0b0b;
     color: #f1f1ed;
+
     font-family: "Inter", Arial, sans-serif;
+
     overflow-x: hidden;
 }
 
@@ -29,14 +31,17 @@ a {
 
 img {
     display: block;
-    width: 100%;
+    max-width: 100%;
 }
 
 
-/* NAVIGATION */
+/* =========================
+   NAVIGATION
+========================= */
 
 .nav {
     height: 80px;
+
     padding: 0 5vw;
 
     display: flex;
@@ -53,6 +58,7 @@ img {
 .logo {
     font-size: 20px;
     font-weight: 900;
+
     letter-spacing: -1px;
 }
 
@@ -66,6 +72,7 @@ img {
 .nav nav a {
     font-size: 11px;
     font-weight: 700;
+
     letter-spacing: 1.5px;
 
     opacity: 0.65;
@@ -79,7 +86,9 @@ img {
 }
 
 
-/* HERO */
+/* =========================
+   HERO
+========================= */
 
 .hero {
     min-height: calc(100vh - 80px);
@@ -98,6 +107,7 @@ img {
 
     font-size: 10px;
     font-weight: 700;
+
     letter-spacing: 1.5px;
 
     color: #888;
@@ -124,6 +134,7 @@ img {
 
 .hero-bottom {
     display: flex;
+
     justify-content: space-between;
     align-items: flex-end;
 
@@ -135,6 +146,7 @@ img {
     max-width: 430px;
 
     font-size: 15px;
+
     line-height: 1.6;
 
     color: #aaa;
@@ -148,6 +160,7 @@ img {
 
     font-size: 10px;
     font-weight: 800;
+
     letter-spacing: 1.5px;
 
     transition:
@@ -158,17 +171,21 @@ img {
 
 .work-button span {
     margin-left: 30px;
+
     font-size: 15px;
 }
 
 
 .work-button:hover {
     background: #f1f1ed;
+
     color: #0b0b0b;
 }
 
 
-/* SECTION HEADINGS */
+/* =========================
+   GENERAL SECTIONS
+========================= */
 
 .work-section,
 .about-section,
@@ -179,15 +196,17 @@ img {
 
 .section-heading {
     display: grid;
+
     grid-template-columns: 80px 1fr;
 
-    margin-bottom: 100px;
+    margin-bottom: 120px;
 }
 
 
-.section-heading span,
-.other-heading span {
+.section-heading > span,
+.other-heading > span {
     font-size: 11px;
+
     font-weight: 700;
 
     color: #666;
@@ -208,26 +227,130 @@ img {
 }
 
 
-/* PROJECTS */
+/* =========================
+   PROJECT SHOWCASES
+========================= */
 
-.project {
-    margin-bottom: 180px;
+.project-showcase {
+    margin-bottom: 230px;
 }
 
 
-.project-image {
-    display: block;
+.project-header {
+    display: grid;
 
+    grid-template-columns: 80px 1fr auto;
+
+    align-items: end;
+
+    gap: 30px;
+
+    margin-bottom: 35px;
+}
+
+
+.project-number {
+    font-size: 11px;
+
+    font-weight: 800;
+
+    color: #666;
+}
+
+
+.project-title {
+    min-height: 80px;
+
+    display: flex;
+
+    align-items: flex-end;
+}
+
+
+.project-title img {
+    width: min(430px, 45vw);
+
+    max-height: 130px;
+
+    object-fit: contain;
+
+    object-position: left bottom;
+}
+
+
+.project-title.text-title {
+    font-size: clamp(55px, 8vw, 120px);
+
+    line-height: 0.78;
+
+    letter-spacing: -0.075em;
+
+    font-weight: 900;
+}
+
+
+.project-tag {
+    font-size: 9px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+
+    color: #666;
+
+    white-space: nowrap;
+}
+
+
+/* =========================
+   PROJECT IMAGES
+========================= */
+
+.project-visuals {
+    display: grid;
+
+    grid-template-columns: 0.8fr 1.2fr;
+
+    gap: 20px;
+
+    align-items: stretch;
+}
+
+
+.title-card,
+.gameplay-card {
     position: relative;
 
     overflow: hidden;
 
-    background: #171717;
+    background: #151515;
+
+    min-height: 520px;
 }
 
 
-.project-image img {
+.title-card {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 50px;
+}
+
+
+.title-card img {
+    width: 80%;
+
+    max-height: 80%;
+
+    object-fit: contain;
+}
+
+
+.gameplay-card img {
     width: 100%;
+
     height: 100%;
 
     object-fit: cover;
@@ -238,219 +361,207 @@ img {
 }
 
 
-.project-image:hover img {
-    transform: scale(1.035);
+.gameplay-card:hover img {
+    transform: scale(1.025);
 
-    filter: brightness(0.72);
+    filter: brightness(0.75);
 }
 
 
-.image-label {
+.image-caption {
     position: absolute;
 
+    left: 20px;
     bottom: 20px;
-    right: 20px;
 
-    background: #f1f1ed;
-    color: #0b0b0b;
+    padding: 9px 12px;
 
-    padding: 11px 14px;
+    background: #0b0b0b;
 
     font-size: 9px;
+
     font-weight: 800;
-    letter-spacing: 1px;
 
-    opacity: 0;
-
-    transform: translateY(8px);
-
-    transition:
-        opacity 0.25s ease,
-        transform 0.25s ease;
-}
-
-
-.project-image:hover .image-label {
-    opacity: 1;
-
-    transform: translateY(0);
-}
-
-
-.large-image {
-    width: 100%;
-
-    height: min(70vh, 750px);
-}
-
-
-.project-info {
-    display: grid;
-
-    grid-template-columns: 30% 1fr;
-
-    border-top: 1px solid #333;
-
-    margin-top: 25px;
-
-    padding-top: 20px;
-}
-
-
-.project-number {
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 1px;
-
-    color: #777;
-}
-
-
-.project-type {
-    display: block;
-
-    font-size: 9px;
-    font-weight: 700;
     letter-spacing: 1.5px;
-
-    color: #777;
-
-    margin-bottom: 20px;
-}
-
-
-.project h3 {
-    font-size: clamp(45px, 7vw, 100px);
-
-    line-height: 0.85;
-
-    letter-spacing: -0.065em;
-
-    margin-bottom: 25px;
-}
-
-
-.project p {
-    max-width: 540px;
-
-    font-size: 14px;
-    line-height: 1.7;
 
     color: #aaa;
 }
 
 
-/* CLEAVER VALLEY */
+/* =========================
+   PANKU
+========================= */
 
-.project-split {
-    display: grid;
-
-    grid-template-columns: 0.7fr 1.3fr;
-
-    gap: 6vw;
-
-    align-items: center;
+.panku-project .project-visuals {
+    grid-template-columns: 0.65fr 1.35fr;
 }
 
 
-.project-split .project-info {
-    display: block;
+.panku-project .title-card {
+    min-height: 620px;
 
-    border-top: none;
-
-    margin-top: 0;
-
-    padding-top: 0;
+    background:
+        radial-gradient(
+            circle at center,
+            #202020 0%,
+            #111 55%,
+            #0b0b0b 100%
+        );
 }
 
 
-.project-split .project-number {
-    margin-bottom: 70px;
+.panku-project .gameplay-card {
+    min-height: 620px;
 }
 
 
-.project-split .project-image {
-    height: 650px;
-}
+/* =========================
+   CLEAVER VALLEY
+========================= */
 
-
-/* CLOCK FARM */
-
-.project-clock {
-    display: grid;
-
+.cleaver-project .project-visuals {
     grid-template-columns: 1.35fr 0.65fr;
-
-    gap: 6vw;
-
-    align-items: center;
 }
 
 
-.clock-image-wrap {
-    position: relative;
+.cleaver-project .gameplay-card {
+    min-height: 620px;
 }
 
 
-.clock-image-wrap .project-image {
-    height: 620px;
+.cleaver-title-card {
+    min-height: 620px;
+
+    padding: 35px;
+
+    background: #161616;
 }
 
 
-.clock-logo {
-    position: absolute;
+.cleaver-title-card img {
+    width: 100%;
 
-    width: 190px;
-    height: auto;
-
-    right: -35px;
-    bottom: -45px;
-
-    z-index: 2;
+    max-height: 100%;
 }
 
 
-.project-clock .project-info {
-    display: block;
+/* =========================
+   CLOCK FARM
+========================= */
 
-    border-top: none;
-
-    margin-top: 0;
-
-    padding-top: 0;
+.clock-project .project-visuals {
+    grid-template-columns: 0.8fr 1.2fr;
 }
 
 
-.project-clock .project-number {
-    margin-bottom: 70px;
+.clock-project .title-card {
+    min-height: 580px;
+
+    background: #171717;
+}
+
+
+.clock-project .gameplay-card {
+    min-height: 580px;
+}
+
+
+/* =========================
+   PROJECT DESCRIPTION
+========================= */
+
+.project-description {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr auto;
+
+    gap: 50px;
+
+    border-top: 1px solid #333;
+
+    margin-top: 25px;
+
+    padding-top: 25px;
+}
+
+
+.project-description p {
+    max-width: 500px;
+
+    font-size: 13px;
+
+    line-height: 1.75;
+
+    color: #888;
+}
+
+
+.project-description .project-intro {
+    font-size: 18px;
+
+    line-height: 1.45;
+
+    color: #ddd;
+}
+
+
+.project-link {
+    align-self: end;
+
+    white-space: nowrap;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+
+    border-bottom: 1px solid #555;
+
+    padding-bottom: 7px;
+
+    transition:
+        border-color 0.2s ease,
+        color 0.2s ease;
+}
+
+
+.project-link:hover {
+    border-color: #f1f1ed;
 }
 
 
 .contribution {
     display: inline-block;
 
-    margin-top: 25px;
+    align-self: end;
 
-    font-size: 9px;
-    font-weight: 800;
-    letter-spacing: 1.5px;
+    width: fit-content;
 
     border: 1px solid #444;
 
     padding: 10px 12px;
 
+    font-size: 9px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+
     color: #aaa;
 }
 
 
-/* OTHER WORK */
+/* =========================
+   OTHER WORK
+========================= */
 
 .other-heading {
     display: grid;
 
     grid-template-columns: 80px 1fr;
 
-    margin: 250px 0 90px;
+    margin: 280px 0 90px;
 }
 
 
@@ -471,7 +582,9 @@ img {
     border-right: 1px solid #333;
 
     display: flex;
+
     flex-direction: column;
+
     justify-content: space-between;
 }
 
@@ -483,7 +596,9 @@ img {
 
 .small-project > span {
     font-size: 9px;
+
     font-weight: 800;
+
     letter-spacing: 1.5px;
 
     color: #666;
@@ -501,13 +616,16 @@ img {
     max-width: 300px;
 
     font-size: 12px;
+
     line-height: 1.6;
 
     color: #888;
 }
 
 
-/* ABOUT */
+/* =========================
+   ABOUT
+========================= */
 
 .about-section {
     border-top: 1px solid #292929;
@@ -550,7 +668,9 @@ img {
 }
 
 
-/* SKILLS */
+/* =========================
+   SKILLS
+========================= */
 
 .skills-section {
     border-top: 1px solid #292929;
@@ -601,7 +721,9 @@ img {
 }
 
 
-/* CONTACT */
+/* =========================
+   CONTACT
+========================= */
 
 .contact-section {
     min-height: 80vh;
@@ -611,13 +733,16 @@ img {
     border-top: 1px solid #292929;
 
     display: flex;
+
     flex-direction: column;
+
     justify-content: center;
 }
 
 
 .contact-number {
     font-size: 10px;
+
     font-weight: 700;
 
     color: #666;
@@ -658,14 +783,14 @@ img {
     width: fit-content;
 
     font-size: 12px;
+
     font-weight: 800;
+
     letter-spacing: 1px;
 
     border-bottom: 1px solid #777;
 
     padding-bottom: 7px;
-
-    transition: border-color 0.2s ease;
 }
 
 
@@ -674,7 +799,9 @@ img {
 }
 
 
-/* FOOTER */
+/* =========================
+   FOOTER
+========================= */
 
 footer {
     border-top: 1px solid #292929;
@@ -686,7 +813,9 @@ footer {
     justify-content: space-between;
 
     font-size: 9px;
+
     font-weight: 700;
+
     letter-spacing: 1px;
 
     color: #666;
@@ -698,7 +827,9 @@ footer a:hover {
 }
 
 
-/* MOBILE */
+/* =========================
+   MOBILE
+========================= */
 
 @media (max-width: 800px) {
 
@@ -748,7 +879,7 @@ footer a:hover {
     .section-heading {
         grid-template-columns: 40px 1fr;
 
-        margin-bottom: 60px;
+        margin-bottom: 70px;
     }
 
 
@@ -758,75 +889,98 @@ footer a:hover {
     }
 
 
-    .project {
-        margin-bottom: 120px;
+    /* PROJECTS */
+
+    .project-showcase {
+        margin-bottom: 140px;
     }
 
 
-    .large-image {
-        height: 55vw;
+    .project-header {
+        grid-template-columns: 35px 1fr;
 
-        min-height: 280px;
+        gap: 15px;
+
+        align-items: start;
     }
 
 
-    .project-info {
-        display: block;
+    .project-title {
+        min-height: 60px;
     }
 
 
-    .project-number {
-        margin-bottom: 35px;
+    .project-title img {
+        width: 100%;
+
+        max-width: 280px;
+
+        max-height: 90px;
     }
 
 
-    .project-split,
-    .project-clock {
-        display: flex;
-
-        flex-direction: column;
-
-        gap: 35px;
-
-        align-items: stretch;
+    .project-title.text-title {
+        font-size: 14vw;
     }
 
 
-    .project-split .project-info,
-    .project-clock .project-info {
-        order: 1;
+    .project-tag {
+        grid-column: 2;
+
+        white-space: normal;
+
+        margin-top: -5px;
     }
 
 
-    .project-split .project-image,
-    .clock-image-wrap .project-image {
-        order: 2;
+    .project-visuals,
+    .panku-project .project-visuals,
+    .cleaver-project .project-visuals,
+    .clock-project .project-visuals {
+        grid-template-columns: 1fr;
+
+        gap: 12px;
+    }
+
+
+    .title-card,
+    .gameplay-card,
+    .panku-project .title-card,
+    .panku-project .gameplay-card,
+    .cleaver-project .gameplay-card,
+    .cleaver-title-card,
+    .clock-project .title-card,
+    .clock-project .gameplay-card {
+        min-height: 300px;
 
         height: 60vw;
-
-        min-height: 280px;
     }
 
 
-    .project-split .project-number,
-    .project-clock .project-number {
-        margin-bottom: 35px;
+    .project-description {
+        grid-template-columns: 1fr;
+
+        gap: 25px;
     }
 
 
-    .clock-logo {
-        width: 130px;
-
-        right: -10px;
-
-        bottom: -30px;
+    .project-description .project-intro {
+        font-size: 16px;
     }
 
+
+    .project-link,
+    .contribution {
+        align-self: start;
+    }
+
+
+    /* OTHER */
 
     .other-heading {
         grid-template-columns: 40px 1fr;
 
-        margin-top: 150px;
+        margin-top: 160px;
     }
 
 
@@ -843,6 +997,8 @@ footer a:hover {
         border-bottom: 1px solid #333;
     }
 
+
+    /* ABOUT */
 
     .about-content,
     .skills-list {
@@ -862,6 +1018,8 @@ footer a:hover {
     }
 
 
+    /* SKILLS */
+
     .skill-row {
         grid-template-columns: 35px 1fr;
 
@@ -874,6 +1032,8 @@ footer a:hover {
     }
 
 
+    /* CONTACT */
+
     .contact-section {
         min-height: 70vh;
 
@@ -885,6 +1045,8 @@ footer a:hover {
         font-size: 19vw;
     }
 
+
+    /* FOOTER */
 
     footer {
         flex-direction: column;
