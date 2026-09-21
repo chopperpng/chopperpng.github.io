@@ -9,8 +9,8 @@
 
 <body>
 
-<header>
-    <div class="logo">ALEX NICHOLS</div>
+<header class="site-header">
+    <a href="#" class="site-name">ALEX NICHOLS</a>
 
     <nav>
         <a href="#work">WORK</a>
@@ -23,360 +23,323 @@
 <main>
 
     <!-- HERO -->
-
     <section class="hero">
-
-        <div class="hero-label">
-            <span>GAME TECHNOLOGY</span>
-            <span>BIRMINGHAM CITY UNIVERSITY</span>
+        <div class="hero-small">
+            GAME TECHNOLOGY / BIRMINGHAM CITY UNIVERSITY
         </div>
 
         <h1>
             ALEX<br>
-            <span>NICHOLS.</span>
+            <span>NICHOLS</span>
         </h1>
 
-        <div class="hero-info">
+        <div class="hero-bottom">
             <p>
-                Game Technology student exploring programming,
-                game development, design, audio and 3D.
+                GAME TECHNOLOGY STUDENT<br>
+                MAKING GAMES, SYSTEMS &amp; WORLDS
             </p>
 
-            <p>
-                BSc (Hons)<br>
-                2026 — Present
-            </p>
+            <span class="hero-number">02 / 04</span>
         </div>
-
     </section>
 
 
     <!-- WORK -->
-
     <section id="work" class="work">
 
-        <div class="section-header">
+        <div class="section-heading">
             <span>01</span>
-
-            <div>
-                <p class="eyebrow">SELECTED WORK</p>
-                <h2>PROJECTS</h2>
-            </div>
+            <h2>SELECTED WORK</h2>
         </div>
 
 
         <!-- PANKU -->
-
-        <article class="project">
+        <article class="project featured">
 
             <div class="project-header">
                 <div>
-                    <span>01</span>
+                    <span class="project-number">01</span>
                     <h3>PANKU!</h3>
                 </div>
 
-                <div class="project-tags">
-                    <span>UNREAL ENGINE 5</span>
+                <span class="project-type">UNREAL ENGINE 5 / BLUEPRINTS</span>
+            </div>
+
+            <a href="panku.html" class="project-image-link">
+                <div class="project-image">
+                    <img src="websiteImages/panku1.png" alt="Panku! gameplay">
+
+                    <div class="project-logo">
+                        <img src="websiteImages/pankulogo.png" alt="Panku! logo">
+                    </div>
+
+                    <div class="image-arrow">↗</div>
+                </div>
+            </a>
+
+            <div class="project-info">
+
+                <div class="project-meta">
+                    SOLO PROJECT · FIRST UNREAL ENGINE PROJECT
+                </div>
+
+                <p class="project-description">
+                    A five-level Doom-like boomer shooter built entirely in Unreal Engine 5.
+                    The player fights through levels, finds weapons and keys, opens locked
+                    areas and reaches the end of each stage.
+                </p>
+
+                <p class="project-description">
+                    I built the entire project using Unreal Blueprints, including the weapon
+                    systems, enemy systems, controller support, animation systems and visual
+                    effects. I also created the game's audio and handled the overall game design.
+                </p>
+
+                <div class="tags">
+                    <span>UE5</span>
                     <span>BLUEPRINTS</span>
-                    <span>SOLO</span>
-                </div>
-            </div>
-
-
-            <div class="project-image">
-
-                <img
-                    src="websiteImages/panku1.png"
-                    alt="Panku gameplay"
-                >
-
-                <a href="panku.html" class="project-logo">
-                    <img
-                        src="websiteImages/pankulogo.png"
-                        alt="Panku logo"
-                    >
-                    <span>VIEW PROJECT →</span>
-                </a>
-
-            </div>
-
-
-            <div class="project-description">
-
-                <div class="project-type">
-                    SOLO PROJECT
-                </div>
-
-                <div>
-                    <p class="project-lead">
-                        A five-level boomer shooter inspired by
-                        classic Doom-style FPS games.
-                    </p>
-
-                    <p>
-                        Built entirely in Unreal Engine 5 using
-                        Blueprints. The project involved building
-                        weapon systems, enemy systems, animation
-                        systems, controller support and visual
-                        effects alongside the game's design and audio.
-                    </p>
+                    <span>GAME DESIGN</span>
+                    <span>AUDIO</span>
+                    <span>VFX</span>
+                    <span>CONTROLLER SUPPORT</span>
                 </div>
 
             </div>
-
         </article>
 
 
         <!-- CLEAVER VALLEY -->
-
         <article class="project">
 
             <div class="project-header">
                 <div>
-                    <span>02</span>
+                    <span class="project-number">02</span>
                     <h3>CLEAVER VALLEY</h3>
                 </div>
 
-                <div class="project-tags">
-                    <span>UNITY</span>
-                    <span>C++</span>
-                    <span>SOLO</span>
-                </div>
+                <span class="project-type">UNITY / C++</span>
             </div>
-
 
             <div class="project-image">
+                <img src="websiteImages/cleavervalley1.gif" alt="Cleaver Valley gameplay">
 
-                <img
-                    src="websiteImages/cleavervalley1.gif"
-                    alt="Cleaver Valley gameplay"
-                >
-
-                <a href="#work" class="project-logo">
-                    <img
-                        src="websiteImages/cleavervalleylogo.png"
-                        alt="Cleaver Valley logo"
-                    >
-                    <span>PROJECT DETAILS →</span>
-                </a>
-
+                <div class="project-logo">
+                    <img src="websiteImages/cleavervalleylogo.png" alt="Cleaver Valley logo">
+                </div>
             </div>
 
+            <div class="project-info">
 
-            <div class="project-description">
-
-                <div class="project-type">
-                    SOLO PROJECT
+                <div class="project-meta">
+                    SOLO PROJECT · UNIVERSITY PROGRAMMING PROJECT
                 </div>
 
-                <div>
-                    <p class="project-lead">
-                        An early university programming project
-                        created in Unity and written entirely in C++.
-                    </p>
+                <p class="project-description">
+                    A simple arena-based shooter created in Unity using C++.
+                    The player starts with four weapons, switches between them and
+                    fights waves of randomly spawning enemies.
+                </p>
 
-                    <p>
-                        A simple arena shooter where the player
-                        switches between four weapons and fights
-                        randomly spawning enemies until reaching
-                        100 kills.
-                    </p>
+                <p class="project-description">
+                    The entire game and all of its programming were created by me.
+                    The project focused heavily on applying C++ programming concepts
+                    to a playable game.
+                </p>
+
+                <div class="tags">
+                    <span>UNITY</span>
+                    <span>C++</span>
+                    <span>GAMEPLAY PROGRAMMING</span>
+                    <span>WEAPONS</span>
                 </div>
 
             </div>
-
         </article>
 
 
         <!-- CLOCK FARM -->
-
         <article class="project">
 
             <div class="project-header">
                 <div>
-                    <span>03</span>
+                    <span class="project-number">03</span>
                     <h3>CLOCK FARM</h3>
                 </div>
 
-                <div class="project-tags">
-                    <span>UNREAL ENGINE 5</span>
-                    <span>BLUEPRINTS</span>
-                    <span>GAME JAM</span>
-                </div>
+                <span class="project-type">UE5 / GAME JAM</span>
             </div>
-
 
             <div class="project-image">
+                <img src="websiteImages/clockfarm1.png" alt="Clock Farm gameplay">
 
-                <img
-                    src="websiteImages/clockfarm1.png"
-                    alt="Clock Farm gameplay"
-                >
-
-                <a href="#work" class="project-logo">
-                    <img
-                        src="websiteImages/clockfarmlogo.png"
-                        alt="Clock Farm logo"
-                    >
-                    <span>PROJECT DETAILS →</span>
-                </a>
-
+                <div class="project-logo">
+                    <img src="websiteImages/clockfarmlogo.png" alt="Clock Farm logo">
+                </div>
             </div>
 
+            <div class="project-info">
 
-            <div class="project-description">
-
-                <div class="project-type">
-                    3-DAY GAME JAM
+                <div class="project-meta">
+                    3-DAY GAME JAM · LAME JAM · TEAM OF TWO
                 </div>
 
-                <div>
-                    <p class="project-lead">
-                        A farming game created during Lame Jam,
-                        developed with a friend over three days.
-                    </p>
+                <p class="project-description">
+                    A farming game created in three days for Lame Jam.
+                    The player must grow crops and earn enough money to pay off
+                    their debt.
+                </p>
 
-                    <p>
-                        Crops grow by sacrificing years of the
-                        player's life, creating a balance between
-                        farming, money and time.
-                    </p>
+                <p class="project-description">
+                    The game's main mechanic is that growing plants costs the player
+                    years of their life. I handled a large amount of the Blueprint
+                    programming, all of the game's art and all of its audio.
+                </p>
+
+                <div class="tags">
+                    <span>UE5</span>
+                    <span>BLUEPRINTS</span>
+                    <span>GAME JAM</span>
+                    <span>ART</span>
+                    <span>AUDIO</span>
                 </div>
 
             </div>
-
         </article>
 
-
-        <!-- OTHER WORK -->
-
-        <section class="other-work">
-
-            <div class="other-header">
-                <span>04</span>
-                <h2>OTHER WORK</h2>
-            </div>
+    </section>
 
 
-            <div class="other-grid">
+    <!-- OTHER WORK -->
+    <section class="other-work">
 
-                <article>
-                    <span>04.01</span>
+        <div class="section-heading">
+            <span>02</span>
+            <h2>OTHER WORK</h2>
+        </div>
 
-                    <h3>3D MODEL</h3>
+        <div class="other-grid">
 
-                    <p>
-                        3D modelling assignment created in Maya,
-                        with additional personal experience using Blender.
-                    </p>
+            <article class="other-item">
+                <div class="other-number">04</div>
+                <h3>3D MODELLING</h3>
 
-                    <small>MAYA / BLENDER</small>
-                </article>
+                <p>
+                    Experience creating 3D models using Maya through university
+                    assignments, alongside personal experience using Blender.
+                </p>
 
-
-                <article>
-                    <span>04.02</span>
-
-                    <h3>3D ANIMATION</h3>
-
-                    <p>
-                        Group teaser project involving character
-                        animation, texturing, lighting and complete
-                        audio production.
-                    </p>
-
-                    <small>MAYA / AUDIO</small>
-                </article>
+                <span class="other-tools">MAYA / BLENDER</span>
+            </article>
 
 
-                <article>
-                    <span>04.03</span>
+            <article class="other-item">
+                <div class="other-number">05</div>
+                <h3>3D ANIMATION</h3>
 
-                    <h3>CARD GAME</h3>
+                <p>
+                    Group animation project creating a teaser for a fictional game.
+                    I animated a section using a rigged character and handled
+                    texturing, lighting and the project's audio.
+                </p>
 
-                    <p>
-                        Terraria-inspired 1v1 card game featuring
-                        approximately 100 designed and balanced cards.
-                    </p>
+                <span class="other-tools">MAYA / ANIMATION / AUDIO</span>
+            </article>
 
-                    <small>GAME DESIGN</small>
-                </article>
 
-            </div>
+            <article class="other-item">
+                <div class="other-number">06</div>
+                <h3>CARD GAME DESIGN</h3>
 
-        </section>
+                <p>
+                    A Terraria-inspired 1v1 card game designed around a
+                    Yu-Gi-Oh!-style format. I designed approximately 100 cards,
+                    including their mechanics, balance and visual design.
+                </p>
+
+                <span class="other-tools">GAME DESIGN / BALANCING / VISUAL DESIGN</span>
+            </article>
+
+        </div>
 
     </section>
 
 
     <!-- ABOUT -->
-
     <section id="about" class="about">
 
-        <div class="section-header">
-            <span>02</span>
-
-            <div>
-                <p class="eyebrow">ABOUT ME</p>
-                <h2>WHAT I DO</h2>
-            </div>
+        <div class="section-heading">
+            <span>03</span>
+            <h2>ABOUT</h2>
         </div>
-
 
         <div class="about-grid">
 
-            <h3>
-                I'M INTERESTED<br>
-                IN HOW GAMES<br>
-                <span>WORK.</span>
-            </h3>
+            <div class="about-intro">
+                <h3>
+                    GAME TECHNOLOGY<br>
+                    STUDENT
+                </h3>
+            </div>
 
-            <div>
+            <div class="about-text">
+
                 <p>
-                    I'm a Game Technology student at Birmingham
-                    City University, heading into my second year.
+                    I'm Alex Nichols, a Game Technology student at Birmingham City
+                    University, currently entering my second year.
                 </p>
 
                 <p>
-                    My first year has taken me through programming,
-                    game engines, 3D modelling, animation, game
-                    design and audio.
+                    I'm interested in the whole process of making games — from
+                    programming and systems to design, visuals, audio and the
+                    technology underneath them.
                 </p>
 
                 <p>
-                    Outside university I'm interested in games,
-                    music, cinema, art and computer hardware.
-                    I like understanding what makes things work
-                    and experimenting with them.
+                    I'm particularly interested in understanding how computers and
+                    game hardware work, while continuing to develop my programming
+                    and game development skills throughout university.
                 </p>
+
+                <p>
+                    Outside of game development, I'm interested in music, cinema,
+                    art and other forms of creative expression.
+                </p>
+
             </div>
 
         </div>
 
+    </section>
 
-        <!-- SKILLS -->
 
-        <div class="skills">
+    <!-- SKILLS -->
+    <section class="skills">
 
-            <div class="skills-title">
-                SKILLS &amp; TOOLS
+        <div class="section-heading">
+            <span>04</span>
+            <h2>SKILLS &amp; TOOLS</h2>
+        </div>
+
+        <div class="skills-grid">
+
+            <div>
+                <h3>GAME DEVELOPMENT</h3>
+                <p>Unity<br>Unreal Engine 5<br>Game Design<br>Game Jams</p>
             </div>
 
-            <div class="skill-list">
+            <div>
+                <h3>PROGRAMMING</h3>
+                <p>C++<br>Unreal Blueprints<br>Gameplay Systems<br>Controller Systems</p>
+            </div>
 
-                <span>C++</span>
-                <span>UNREAL BLUEPRINTS</span>
-                <span>UNREAL ENGINE 5</span>
-                <span>UNITY</span>
-                <span>MAYA</span>
-                <span>BLENDER</span>
-                <span>GAME DESIGN</span>
-                <span>ANIMATION</span>
-                <span>LIGHTING</span>
-                <span>TEXTURING</span>
-                <span>FL STUDIO</span>
-                <span>SOUND DESIGN</span>
+            <div>
+                <h3>3D &amp; VISUALS</h3>
+                <p>Maya<br>Blender<br>Modelling<br>Texturing<br>Lighting<br>Animation</p>
+            </div>
 
+            <div>
+                <h3>AUDIO</h3>
+                <p>FL Studio<br>Music Production<br>Sound Design<br>Game Audio</p>
             </div>
 
         </div>
@@ -385,32 +348,22 @@
 
 
     <!-- CONTACT -->
-
     <section id="contact" class="contact">
 
-        <div class="section-header">
-            <span>03</span>
-
-            <div>
-                <p class="eyebrow">CONTACT</p>
-                <h2>LET'S TALK</h2>
-            </div>
+        <div class="section-heading">
+            <span>05</span>
+            <h2>CONTACT</h2>
         </div>
 
+        <h3>LET'S MAKE<br>SOMETHING.</h3>
 
-        <div class="contact-content">
+        <p>
+            Interested in working together, talking games or seeing more of my work?
+        </p>
 
-            <p>
-                GOT A PROJECT?<br>
-                WANT TO COLLABORATE?
-            </p>
-
-            <a href="mailto:YOUR-EMAIL-HERE">
-                YOUR-EMAIL-HERE
-                <span>↗</span>
-            </a>
-
-        </div>
+        <a href="mailto:YOUR-EMAIL-HERE" class="contact-link">
+            YOUR-EMAIL-HERE ↗
+        </a>
 
     </section>
 
@@ -418,9 +371,8 @@
 
 
 <footer>
-    <span>© 2026 ALEX NICHOLS</span>
-    <span>GAME TECHNOLOGY / BIRMINGHAM</span>
-    <a href="#top">BACK TO TOP ↑</a>
+    <span>ALEX NICHOLS</span>
+    <span>GAME TECHNOLOGY / 2026</span>
 </footer>
 
 </body>
